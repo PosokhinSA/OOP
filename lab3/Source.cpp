@@ -9,9 +9,9 @@ int main()
 {
 	TQueue queue;
     
-    queue.push(std::shared_ptr<Rhombus>(new Rhombus(4, 20)));
-    queue.push(std::shared_ptr<Rhombus>(new Rhombus(5, 30)));
-    queue.push(std::shared_ptr<Rhombus>(new Rhombus(6, 18)));
+    queue.push(std::shared_ptr<Rhombus>(new Rhombus(4, 20)), nullptr, nullptr);
+    queue.push(nullptr,std::shared_ptr<Trapeze>(new Trapeze(4, 5, 2, 2)), nullptr);
+    queue.push(nullptr, nullptr, std::shared_ptr<Pentagon>(new Pentagon(5)));
 
     
     std::cout << queue;
@@ -19,9 +19,8 @@ int main()
     
     std::shared_ptr<Rhombus> t;
     
-    t = queue.pop(); std::cout << *t << std::endl;
-    t = queue.pop(); std::cout << *t << std::endl;
-    t = queue.pop(); std::cout << *t << std::endl;
+    t = queue.top_rhomb(); 
+    std::cout << *t << std::endl;
 	//system("pause");
 	return 0;
 }

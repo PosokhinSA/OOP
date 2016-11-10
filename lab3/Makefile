@@ -3,7 +3,7 @@ CFLAGS = -pedantic -Wall -Werror -Wno-sign-compare -Wno-long-long -lm -std=c++11
 
 all: main clean
 
-main: rhombus.o trapeze.o TQueueItem.o TQueue.o  Source.o
+main: pentagon.o rhombus.o trapeze.o TQueueItem.o TQueue.o  Source.o
 	$(CC) $^ -o $@
 
 %.o: %.cpp

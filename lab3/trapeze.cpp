@@ -39,7 +39,7 @@ void Trapeze::Print() {
 
 
 std::ostream& operator<<(std::ostream& os, const Trapeze& obj) {
-	os << "Trapeze: smaller_base = " << obj.smaller_base << ", bigger_base = " << obj.bigger_base << ", left_side = " << obj.left_side << ", right_side = " << obj.right_side << std::endl;
+	os << "Trapeze: smaller_base = " << obj.smaller_base << ", bigger_base = " << obj.bigger_base << ", left_side = " << obj.left_side << ", right_side = " << obj.right_side;
 	return os;
 }
 
