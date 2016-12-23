@@ -11,17 +11,16 @@ using namespace std;
 
 int main()
 {
-   /* 
+    
 	TQueue<Figure> queue;
     
     queue.push(std::shared_ptr<Rhombus>(new Rhombus(4, 20)));
     queue.push(std::shared_ptr<Trapeze>(new Trapeze(4, 5, 2, 2)));
     queue.push(std::shared_ptr<Pentagon>(new Pentagon(5)));
     queue.pop();
-    */
-   // queue.push(std::shared_ptr<Pentagon>(new Pentagon(4)));
     
-    //std::cout << queue;
+    queue.push(std::shared_ptr<Rhombus>(new Rhombus(4, 20)));
+    
     
     /*
     std::shared_ptr<Figure> t;
@@ -29,12 +28,14 @@ int main()
 	t->Print();
 	//std::cout << t << std::endl;
 	*/
-    
- /*   for (auto i : queue) {
+
+    for (auto i : queue) {
         std::cout << "[ ";
         i->Print();
         std::cout << " ]" << std::endl;
     }
+    
+
     /*
     for (TIterator<TQueueItem<Figure>, Figure> it = queue.begin(), end = queue.end(); it != end; it++) {
         std::cout << "[ ";
@@ -42,7 +43,7 @@ int main()
         std::cout << " ]" << std::endl;
     }
     */
-
+    /*
     TAllocator allocator(sizeof(int), 10);
     int *a1 = nullptr;
     int *a2 = nullptr;
@@ -67,7 +68,7 @@ int main()
     allocator.deallocate(a2);
     allocator.deallocate(a4);
     allocator.deallocate(a5);
-
+    */
 
 	system("pause");
 	return 0;

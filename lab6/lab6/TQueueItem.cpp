@@ -9,12 +9,12 @@
 
 template <class T> TQueueItem<T>::TQueueItem(const std::shared_ptr<T>& item) 
 {
-	this->item = item;
+	this->item = item; 
 	this->next = nullptr;
 	std::cout << "Queue item: created" << std::endl;
 }
 
-template <class T> TAllocator TQueueItem<T>::queueitem_allocator(sizeof(TQueueItem<T>), 2);
+template <class T> TAllocator TQueueItem<T>::queueitem_allocator(sizeof(TQueueItem<T>), 100);
 
 template <class T> void TQueueItem<T>::SetNext(std::shared_ptr<TQueueItem<T>> &next)
 {
@@ -53,7 +53,7 @@ template <class T> void * TQueueItem<T>::operator new(size_t size)
 }
 template <class T> void TQueueItem<T>::operator delete(void* p) 
 {
-    queueitem_allocator.deallocate(nullptr);
+    queueitem_allocator.deallocate(p);
 }
 
 
